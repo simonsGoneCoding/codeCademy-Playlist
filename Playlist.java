@@ -18,5 +18,16 @@ public class Playlist {
 
         desertIslandPlaylist.remove(5);
         System.out.println("Array size after cut is: " + desertIslandPlaylist.size() + "\n");
+
+        // Swap songs
+        int firstIndexToSwap = desertIslandPlaylist.indexOf("Mad Doctor");
+        String firstToSwap = desertIslandPlaylist.get(firstIndexToSwap);
+        int secondIndexToSwap = desertIslandPlaylist.indexOf("Get down");
+        String SecondToSwap = desertIslandPlaylist.get(secondIndexToSwap);
+
+        desertIslandPlaylist.set(firstIndexToSwap, SecondToSwap);
+        desertIslandPlaylist.set(secondIndexToSwap, firstToSwap);
+        System.out.println(desertIslandPlaylist);
     }
+
 }
